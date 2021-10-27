@@ -3,18 +3,21 @@ Home assignment bioinformatics
 #команды, используемые для домашнего задания (взяты из семинара 4)
 
 создание символических ссылок в папке для файлов
+
 ln -s /usr/share/data-minor-bioinf/assembly/oil_R1.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oil_R2.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R1_001.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R2_001.fastq
 
 отбор миллионов чтений (типа paired-end и 1.5 миллиона чтений типа mate-pairs)
+
 seqtk sample -s3108 oil_R1.fastq 5000000 > sub1.fq
 seqtk sample -s3108 oil_R2.fastq 5000000 > sub2.fq
 seqtk sample -s3108 oilMP_S4_L001_R1_001.fastq 1500000 > sub3.fq
 seqtk sample -s3108 oilMP_S4_L001_R2_001.fastq 1500000 > sub4.fq
 
 работа с программами fastQC и multiQC
+
 htop
 mkdir fastqc
 ls sub* | xargs -P 4 -tI{} fastqc -o fastqc {}
