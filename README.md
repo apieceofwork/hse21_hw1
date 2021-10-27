@@ -65,3 +65,8 @@ time platanus assemble -o Poil -t 1 -f trimmed_fq/sub1.fq.trimmed trimmed_fq/sub
 time platanus scaffold -o Poil -t 1 -c Poil_contig.fa -IP1 trimmed_fq/sub1.fq.trimmed trimmed_fq/sub2.fq.trimmed -OP2 trimmed_fq/sub3.fq.int_trimmed trimmed_fq/sub4.fq.int_trimmed 2> scaffold.log
 
 time platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 trimmed_fq/sub1.fq.trimmed trimmed_fq/sub2.fq.trimmed -OP2 trimmed_fq/sub3.fq.int_trimmed trimmed_fq/sub4.fq.int_trimmed 2>gapclose.log
+
+Скрины и статистика
+
+![image](https://user-images.githubusercontent.com/57996343/139093837-bd731fee-50df-4b91-9137-fa06798aa9b7.png)
+
